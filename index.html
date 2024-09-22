@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recriating rxjs</title>
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        body {
+            overflow: hidden;
+        }
+        canvas {
+            border: 2px dotted gray;
+            border-radius: 10px;
+            cursor: crosshair;
+        }
+        .container {
+            padding: 20px;
+        }
+        .row {
+            display: flex;
+        }
+        .col-md-12 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    </style>
+    <script type="module" src="index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Use your brain</h1>
+                <p>Draw in the canvas</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <canvas id="canvas">
+                    Your browser does not support HTML5 canvas.
+                </canvas>
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <button id="clearBtn">Clear</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
