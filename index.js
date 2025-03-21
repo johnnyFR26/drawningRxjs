@@ -2,6 +2,7 @@ import { fromEvent, interval, map, merge, switchMap, takeUntil,  } from "./opera
 
 const canvas = document.getElementById('canvas');
 const clearBtn = document.getElementById('clearBtn');
+const colorPicker = document.getElementById('colorPicker');
 const ctx = canvas.getContext('2d');
 
 const mouseEvents = {
@@ -47,8 +48,10 @@ const resetCanvas = (width, height) => {
     canvas.height = height || parent.clientHeight * 1.5
 
     ctx.clearRect(0, 0, canvas.width, canvas.height)
-    ctx.strokeStyle = 'green'
-    ctx.clientWidth = 4
+    colorPicker.addEventListener('input', (e) => {
+        ctx.strokeStyle = e.target.value || 'green'
+    })
+    ctx.linewidth = 100
 }
 
 resetCanvas()
